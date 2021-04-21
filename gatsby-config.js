@@ -17,5 +17,22 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: `gatsby-plugin-webfonts`,
+            options: {
+                fonts: {
+                    google: [
+                        {
+                            family: 'Roboto',
+                            variants: ['300', '400', '500'],
+                        },
+                        {
+                            family: 'Orelega One',
+                            variants: ['400'],
+                        },
+                    ],
+                },
+            },
+        },
     ],
 };

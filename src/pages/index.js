@@ -1,16 +1,10 @@
 import React from 'react';
+import TitleBlock from '../components/TitleBlock';
 
 export default function Home() {
     return (
         <>
-            <div>Hello world!</div>
-            <div
-                onClick={() => {
-                    console.log('eslint and a11y plugin test');
-                }}
-            >
-                Test
-            </div>
+            <TitleBlock />
         </>
     );
 }
