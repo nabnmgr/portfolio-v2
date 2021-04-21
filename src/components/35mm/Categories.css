@@ -1,0 +1,91 @@
+.categories {
+    padding: 10px 0 6vh;
+
+    .negative-slide {
+        padding: 2px;
+        position: relative;
+        display: flex;
+        flex: 1;
+        max-width: 540px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+        }
+
+        &:before {
+            width: 100%;
+            height: calc(100% + 10px);
+            top: -5px;
+            background-color: #49261b;
+            border-top: 5px dotted #f9f9f9;
+            border-bottom: 5px dotted #f9f9f9;
+        }
+
+        &:after {
+            width: calc(100% + 8px);
+            height: calc(100% + 14px);
+            background-color: #49261b;
+            top: -7px;
+            left: -2px;
+            z-index: -1;
+            transform: skewX(-2deg);
+        }
+    }
+
+    .category {
+        @apply h-20 uppercase tracking-wide shadow-md;
+        position: relative;
+        overflow: hidden;
+        flex: 1;
+
+        .image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            filter: invert(1);
+            opacity: 0.7;
+            transition: all 0.4s ease-in-out;
+            padding: 2px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 900;
+            background: white;
+            padding: 0.25em 0.5em;
+            mix-blend-mode: lighten;
+        }
+
+        &:hover {
+            .image {
+                filter: none;
+            }
+        }
+
+        &.active {
+            .image {
+                filter: none;
+                opacity: 0.3;
+            }
+
+            .text {
+                mix-blend-mode: difference;
+                text-decoration: line-through;
+                @apply bg-green-200;
+            }
+        }
+
+        &:disabled {
+            cursor: default;
+        }
+    }
+}
