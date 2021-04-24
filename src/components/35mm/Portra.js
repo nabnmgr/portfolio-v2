@@ -47,7 +47,7 @@ const Portra = () => {
     };
 
     return (
-        <div>
+        <div className="portra-project">
             <Categories
                 onCategorySelect={handleCategorySelect}
                 currentCategory={currentCategory}

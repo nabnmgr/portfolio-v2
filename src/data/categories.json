@@ -1,18 +1,18 @@
 [
     {
         "category": "all",
-        "cover": "../images/portra/categories/all.JPG"
+        "cover": "../images/portra/categories/all.jpeg"
     },
     {
         "category": "nature",
-        "cover": "../images/portra/categories/nature.JPG"
+        "cover": "../images/portra/categories/nature.jpeg"
     },
     {
         "category": "street",
-        "cover": "../images/portra/categories/street.JPG"
+        "cover": "../images/portra/categories/street.jpeg"
     },
     {
         "category": "portrait",
-        "cover": "../images/portra/categories/portrait.JPG"
+        "cover": "../images/portra/categories/portrait.jpeg"
     }
 ]
