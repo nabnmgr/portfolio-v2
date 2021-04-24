@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import gsap from 'gsap';
 import PhotoStack from './PhotoStack';
 import Categories from './Categories';
 
@@ -33,6 +34,7 @@ const Portra = () => {
 
     const [gallery, setGallery] = useState(data);
     const [currentCategory, setCurrentCategory] = useState('all');
+    const titleRef = useRef();
 
     const handleCategorySelect = category => {
         const filtered = _.filter(data, photo => photo.category === category);
@@ -46,12 +48,29 @@ const Portra = () => {
         setCurrentCategory(category);
     };
 
+    useEffect(() => {
+        gsap.from(titleRef.current, {
+            duration: 0.5,
+            x: 30,
+            autoAlpha: 0,
+            ease: 'Power2.easeOut',
+        });
+    }, []);
+
     return (
         <div className="portra-project">
-            <Categories
-                onCategorySelect={handleCategorySelect}
-                currentCategory={currentCategory}
-            />
+            <div className="header">
+                <div className="title" ref={titleRef}>
+                    <Link to="/" className="home-link font-serif">
+                        NABIN
+                    </Link>
+                </div>
+                <Categories
+                    onCategorySelect={handleCategorySelect}
+                    currentCategory={currentCategory}
+                />
+            </div>
+
             <PhotoStack photos={gallery} />
         </div>
     );

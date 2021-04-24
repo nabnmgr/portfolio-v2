@@ -41,6 +41,7 @@
         position: relative;
         overflow: hidden;
         flex: 1;
+        will-change: opacity;
 
         .image {
             position: absolute;
@@ -64,6 +65,7 @@
             background: white;
             padding: 0.25em 0.5em;
             mix-blend-mode: lighten;
+            // will-change: opacity;
         }
 
         &:hover {

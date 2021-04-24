@@ -13,6 +13,7 @@ const PhotoStack = ({ photos }) => {
     const [dragOut, setDragOut] = useState(false);
     const [verticalMode, setVerticalMode] = useState(false);
     const [disabled, setDisabled] = useState(true);
+    const [delayedStack, setDelayedStack] = useState(true);
     const photosRef = useRef([]);
 
     const bind = useDrag(state => {
@@ -85,6 +86,8 @@ const PhotoStack = ({ photos }) => {
     };
 
     const stackIn = () => {
+        document.body.classList.add('overflow-hidden');
+
         gsap.fromTo(
             photosRef.current,
             {
@@ -94,6 +97,7 @@ const PhotoStack = ({ photos }) => {
                 autoAlpha: 0.02,
             },
             {
+                delay: delayedStack ? 0.65 : 0,
                 duration: 1.2,
                 y: i => Math.sin(i + 2) * -15,
                 x: i => Math.sin(i + 2) * -15,
@@ -101,9 +105,6 @@ const PhotoStack = ({ photos }) => {
                 autoAlpha: 1,
                 ease: 'Power4.easeOut',
                 stagger: 0.05,
-                onStart: () => {
-                    document.body.classList.add('overflow-hidden');
-                },
                 onComplete: onStackAnimationComplete,
             }
         );
@@ -113,6 +114,7 @@ const PhotoStack = ({ photos }) => {
         setDisabled(false);
         checkOrientation();
         document.body.classList.remove('overflow-hidden');
+        setDelayedStack(false);
     };
 
     useEffect(() => {
