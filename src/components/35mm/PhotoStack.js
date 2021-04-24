@@ -13,7 +13,6 @@ const PhotoStack = ({ photos }) => {
     const [dragOut, setDragOut] = useState(false);
     const [verticalMode, setVerticalMode] = useState(false);
     const [disabled, setDisabled] = useState(true);
-    const [delayedStack, setDelayedStack] = useState(true);
     const photosRef = useRef([]);
 
     const bind = useDrag(state => {
@@ -94,10 +93,10 @@ const PhotoStack = ({ photos }) => {
                 y: i => '800' - (i + 1) * 10,
                 x: i => 100 * Math.sin((i + 1) * 45),
                 rotate: i => 20 * Math.sin((i + 1) * 45),
-                autoAlpha: 0.02,
+                autoAlpha: 0,
             },
             {
-                delay: delayedStack ? 0.65 : 0,
+                delay: 0.3,
                 duration: 1.2,
                 y: i => Math.sin(i + 2) * -15,
                 x: i => Math.sin(i + 2) * -15,
@@ -114,7 +113,6 @@ const PhotoStack = ({ photos }) => {
         setDisabled(false);
         checkOrientation();
         document.body.classList.remove('overflow-hidden');
-        setDelayedStack(false);
     };
 
     useEffect(() => {
@@ -177,6 +175,10 @@ const PhotoStack = ({ photos }) => {
                                 fluid="fluid"
                                 alt={photo.description}
                                 draggable={false}
+                                onDragStart={e => {
+                                    // Firefox bug fix
+                                    e.preventDefault();
+                                }}
                             />
                         </div>
                     );
