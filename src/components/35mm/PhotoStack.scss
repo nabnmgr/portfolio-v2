@@ -2,6 +2,10 @@
     &.disabled .photo {
         cursor: default;
     }
+
+    .gatsby-image-wrapper {
+        overflow: unset;
+    }
 }
 
 .photos {

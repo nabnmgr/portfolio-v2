@@ -1,0 +1,18 @@
+[
+    {
+        "category": "all",
+        "cover": "../images/portra/categories/all.JPG"
+    },
+    {
+        "category": "nature",
+        "cover": "../images/portra/categories/nature.JPG"
+    },
+    {
+        "category": "street",
+        "cover": "../images/portra/categories/street.JPG"
+    },
+    {
+        "category": "portrait",
+        "cover": "../images/portra/categories/portrait.JPG"
+    }
+]

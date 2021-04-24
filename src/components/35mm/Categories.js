@@ -1,29 +1,34 @@
 import React, { useEffect, useRef } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import gsap, { TimelineMax } from 'gsap';
-import './Categories.css';
+import './Categories.scss';
 
 const classNames = require('classnames');
 
-const galleries = [
+const query = graphql`
     {
-        category: 'all',
-        cover: 'images/categories/all.jpg',
-    },
-    {
-        category: 'nature',
-        cover: 'images/categories/nature.jpg',
-    },
-    {
-        category: 'street',
-        cover: 'images/categories/street.jpg',
-    },
-    {
-        category: 'portrait',
-        cover: 'images/categories/portrait.jpg',
-    },
-];
+        allCategoriesJson {
+            nodes {
+                category
+                cover {
+                    childImageSharp {
+                        gatsbyImageData(
+                            layout: FULL_WIDTH
+                            placeholder: TRACED_SVG
+                        )
+                    }
+                }
+            }
+        }
+    }
+`;
 
 const Categories = ({ onCategorySelect, currentCategory }) => {
+    const {
+        allCategoriesJson: { nodes: galleries },
+    } = useStaticQuery(query);
+
     const categoriesRef = useRef([]);
     const slideRef = useRef();
 
@@ -32,8 +37,8 @@ const Categories = ({ onCategorySelect, currentCategory }) => {
 
         timeline.add(
             gsap.from(slideRef.current, {
-                delay: 1.5,
-                duration: 0.6,
+                delay: 0.3,
+                duration: 0.8,
                 x: 30,
                 autoAlpha: 0,
                 ease: 'Power4.easeOut',
@@ -54,24 +59,33 @@ const Categories = ({ onCategorySelect, currentCategory }) => {
     return (
         <div className="categories flex justify-center">
             <div className="negative-slide" ref={slideRef}>
-                {galleries.map(({ category, cover }, i) => (
-                    <button
-                        className={classNames({
-                            category: true,
-                            active: currentCategory === category,
-                        })}
-                        key={category}
-                        onClick={() => onCategorySelect(category)}
-                        disabled={currentCategory === category}
-                        type="button"
-                        ref={el => {
-                            categoriesRef.current[i] = el;
-                        }}
-                    >
-                        <img src={cover} alt="" className="image" />
-                        <div className="text">{category}</div>
-                    </button>
-                ))}
+                {galleries.map(({ category, cover }, i) => {
+                    const pathToImage = getImage(
+                        cover.childImageSharp.gatsbyImageData
+                    );
+                    return (
+                        <button
+                            className={classNames({
+                                category: true,
+                                active: currentCategory === category,
+                            })}
+                            key={category}
+                            onClick={() => onCategorySelect(category)}
+                            disabled={currentCategory === category}
+                            type="button"
+                            ref={el => {
+                                categoriesRef.current[i] = el;
+                            }}
+                        >
+                            <GatsbyImage
+                                image={pathToImage}
+                                alt={category}
+                                className="image"
+                            />
+                            <div className="text">{category}</div>
+                        </button>
+                    );
+                })}
             </div>
         </div>
     );

@@ -2,134 +2,134 @@
     {
         "src": "../images/portra/mirror-portrait.JPG",
         "description": "Mirror portrait",
-        "vertical": false,
+        "isVertical": false,
         "category": "portrait"
     },
     {
         "src": "../images/portra/sheep.JPG",
         "description": "Sheep looking at the camera",
-        "vertical": false,
+        "isVertical": false,
         "category": "nature"
     },
     {
         "src": "../images/portra/cycling-portrait-2.JPG",
         "description": "Portrait on cycle",
-        "vertical": false,
+        "isVertical": false,
         "category": "portrait"
     },
     {
         "src": "../images/portra/cycling-portrait-1.JPG",
         "description": "A girl portrait on cycle",
-        "vertical": false,
+        "isVertical": false,
         "category": "portrait"
     },
     {
         "src": "../images/portra/llandudno-2.JPG",
         "description": "Beach paragliding",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/monument-1.JPG",
         "description": "A woman and a man crossing a road",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/monument-2.JPG",
         "description": "A cyclist lying for a rest over a LONDON's BURNING stone bench",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/snowdonia.JPG",
         "description": "Lake in Snowdonia",
-        "vertical": true,
+        "isVertical": true,
         "category": "nature"
     },
     {
         "src": "../images/portra/canary-wharf-1.JPG",
         "description": "Lights in Canary Wharf",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/thames-house.JPG",
         "description": "Thames house",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/notting-hill-3.JPG",
         "description": "Portrait of a cafe owner",
-        "vertical": true,
+        "isVertical": true,
         "category": "portrait"
     },
     {
         "src": "../images/portra/notting-hill-1.JPG",
         "description": "Bright red car",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "id": 29,
         "src": "../images/portra/borough.JPG",
         "description": "A chruch and the Shard building on distant",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/pigeon-escaping.JPG",
         "description": "Portrait with a smile",
-        "vertical": false,
+        "isVertical": false,
         "category": "portrait"
     },
     {
         "src": "../images/portra/llandudno-5.JPG",
         "description": "Sunset in Llandudno beach",
-        "vertical": false,
+        "isVertical": false,
         "category": "nature"
     },
     {
         "src": "../images/portra/elephant-and-castle.JPG",
         "description": "A building in Elephant and Castle with a window cleaning platform",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/richmond-park-1.JPG",
         "description": "Richmond park",
-        "vertical": true,
+        "isVertical": true,
         "category": "nature"
     },
     {
         "src": "../images/portra/southbank-1.JPG",
         "description": "Southbank bridge",
-        "vertical": true,
+        "isVertical": true,
         "category": "street"
     },
     {
         "src": "../images/portra/kew-gardens.JPG",
         "description": "Rowing in Thames river by Kew Gardens",
-        "vertical": false,
+        "isVertical": false,
         "category": "nature"
     },
     {
         "src": "../images/portra/primrose-hill-1.JPG",
         "description": "Sunset in Primrose Hill",
-        "vertical": false,
+        "isVertical": false,
         "category": "nature"
     },
     {
         "src": "../images/portra/chelsea.JPG",
         "description": "Blue house doors matching with car's color",
-        "vertical": false,
+        "isVertical": false,
         "category": "street"
     },
     {
         "src": "../images/portra/llandudno-4.JPG",
         "description": "Llandudno beach",
-        "vertical": false,
+        "isVertical": false,
         "category": "nature"
     }
 ]
