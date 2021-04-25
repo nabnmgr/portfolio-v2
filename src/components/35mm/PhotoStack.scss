@@ -1,4 +1,6 @@
 .photo-stack {
+    position: relative;
+
     &.disabled .photo {
         cursor: default;
     }
@@ -36,4 +38,11 @@
         cursor: grabbing;
         @apply shadow-2xl;
     }
+}
+
+.next-btn {
+    position: absolute;
+    top: -45px;
+    font-style: italic;
+    text-decoration: underline;
 }

@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import './PhotoStack.scss';
 
 const classNames = require('classnames');
+const TAB_KEY = 9;
 
 const PhotoStack = ({ photos }) => {
     const [stack, setStack] = useState(photos);
@@ -13,6 +14,7 @@ const PhotoStack = ({ photos }) => {
     const [dragOut, setDragOut] = useState(false);
     const [verticalMode, setVerticalMode] = useState(false);
     const [disabled, setDisabled] = useState(true);
+    const [showNextButton, setShowNextButton] = useState(false);
     const photosRef = useRef([]);
 
     const bind = useDrag(state => {
@@ -55,6 +57,7 @@ const PhotoStack = ({ photos }) => {
             onComplete: () => {
                 setDragOut(false);
                 if (currentIndex === 0) {
+                    setDisabled(true);
                     reGroup();
                     setCurrentIndex(photos.length - 1);
                     return;
@@ -71,6 +74,9 @@ const PhotoStack = ({ photos }) => {
             rotate: i => Math.sin(i + 3) * 2,
             ease: 'Power4.easeOut',
             stagger: 0.1,
+            onComplete: () => {
+                setDisabled(false);
+            },
         });
         setVerticalMode(false);
     };
@@ -121,6 +127,19 @@ const PhotoStack = ({ photos }) => {
         setCurrentIndex(photos.length - 1);
     }, [photos]);
 
+    const handleKeyDown = e => {
+        if (e.keyCode === TAB_KEY) {
+            setShowNextButton(true);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
     useEffect(() => {
         setDisabled(true);
         setVerticalMode(false);
@@ -152,6 +171,21 @@ const PhotoStack = ({ photos }) => {
                 disabled,
             })}
         >
+            {showNextButton && (
+                <button
+                    className="next-btn"
+                    onClick={() => {
+                        if (disabled || dragging) return;
+                        console.info('PhotoStack.disabled', disabled, dragging);
+                        moveOutside(photosRef.current[currentIndex], -1);
+                    }}
+                    disabled={disabled || dragging}
+                    type="button"
+                >
+                    Next
+                </button>
+            )}
+
             <div className="photos">
                 {stack.map((photo, i) => {
                     const pathToImage = getImage(
