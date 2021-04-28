@@ -6,11 +6,11 @@ import AboutBlock from '../components/AboutBlock';
 
 export default function Home() {
     return (
-        <>
+        <div className="container mx-auto">
             <Navbar />
             <TitleBlock />
             <AboutBlock />
             {/* <Link to="/portra">Portra project</Link> */}
-        </>
+        </div>
     );
 }

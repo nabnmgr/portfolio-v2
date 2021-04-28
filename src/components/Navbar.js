@@ -12,7 +12,8 @@ const Navbar = () => {
                             to="/"
                             className="nav-link logo font-serif text-3xl"
                         >
-                            np
+                            <span className="initial first">n</span>
+                            <span className="initial last">p</span>
                         </Link>
                     </li>
                     <li>

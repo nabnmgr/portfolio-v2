@@ -1,7 +1,11 @@
 #title-block {
-    border: 1px solid blue;
-    height: 60vh;
+    // border: 1px solid blue;
+    height: calc(60vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .title-tag {
+        @apply text-center text-xl font-light tracking-wider;
+    }
 }
