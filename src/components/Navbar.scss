@@ -1,0 +1,21 @@
+#navbar {
+    border: 1px solid red;
+
+    .main-nav {
+        ul {
+            height: 70px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                &:first-child {
+                    margin-right: auto;
+                }
+
+                margin: 0 2rem;
+                @apply tracking-wide;
+            }
+        }
+    }
+}
