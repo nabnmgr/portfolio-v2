@@ -19,6 +19,14 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+                rule: {
+                    include: `${__dirname}/src/images/icons`,
+                },
+            },
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `data`,
@@ -42,6 +50,10 @@ module.exports = {
                     google: [
                         {
                             family: 'Roboto',
+                            variants: ['300', '400', '500'],
+                        },
+                        {
+                            family: 'Roboto Mono',
                             variants: ['300', '400', '500'],
                         },
                         {
