@@ -25,7 +25,7 @@ const ProjectCard = ({ data }) => {
                 <h3 className="project-name">{name}</h3>
                 <div className="project-description">{description}</div>
                 {link && (
-                    <a href={link} target="_blank">
+                    <a href={link} target="_blank" rel="noreferrer">
                         Live demo
                     </a>
                 )}

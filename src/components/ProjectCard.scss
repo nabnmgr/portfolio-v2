@@ -19,4 +19,25 @@
         background-color: #f7f5fc;
         @apply flex flex-col justify-center p-6;
     }
+
+    a {
+        display: inline-block;
+        align-self: flex-end;
+        padding: 0.5em 1.2em;
+        margin-top: 0.75em;
+        border-radius: 2px;
+        background-color: #6f52c2;
+        color: #fff;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:hover {
+            background: #7f69b9;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0px);
+        }
+    }
 }

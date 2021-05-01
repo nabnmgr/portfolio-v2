@@ -27,7 +27,7 @@ const ProjectsBlock = () => {
 
     return (
         <div id="projects-block" className="container mx-auto px-4">
-            <h2 className="my-12">Projects</h2>
+            <h2 className="my-16 text-center">Projects</h2>
             <ul className="projects-list">
                 {data.map((project, index) => (
                     <ProjectCard key={index} data={project} />

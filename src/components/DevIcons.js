@@ -8,6 +8,8 @@ import TypescriptIcon from '../images/icons/typescript.svg';
 import NextjsIcon from '../images/icons/nextjs.svg';
 import ThreeIcon from '../images/icons/three.svg';
 import FolderIcon from '../images/icons/folder.svg';
+import GithubIcon from '../images/icons/github.svg';
+import CodepenIcon from '../images/icons/codepen.svg';
 
 export {
     HtmlIcon,
@@ -20,4 +22,6 @@ export {
     NextjsIcon,
     ThreeIcon,
     FolderIcon,
+    GithubIcon,
+    CodepenIcon,
 };

@@ -1,0 +1,22 @@
+#footer {
+    @apply flex items-center;
+
+    .footer-links {
+        @apply flex;
+
+        a {
+            margin: 0 6px;
+        }
+
+        svg {
+            width: 20px;
+            height: auto;
+        }
+    }
+
+    .to-top {
+        margin-left: auto;
+        @apply flex flex-col items-center cursor-pointer;
+        font-size: 0.8rem;
+    }
+}
