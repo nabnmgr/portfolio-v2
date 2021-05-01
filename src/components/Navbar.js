@@ -4,7 +4,7 @@ import './Navbar.scss';
 
 const Navbar = () => {
     return (
-        <header id="navbar">
+        <header id="navbar" className="container mx-auto">
             <nav className="main-nav">
                 <ul>
                     <li>

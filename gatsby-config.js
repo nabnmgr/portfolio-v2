@@ -1,8 +1,6 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
     /* Your site config here */
@@ -31,6 +29,13 @@ module.exports = {
             options: {
                 name: `data`,
                 path: `${__dirname}/src/data/`,
+            },
+        },
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: `ylmb55ttnu95`,
+                accessToken: process.env.CONTENTFUL_API_KEY,
             },
         },
         `gatsby-plugin-postcss`,

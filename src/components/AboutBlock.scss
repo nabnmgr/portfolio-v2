@@ -1,9 +1,13 @@
 #about-block {
-    min-height: calc(100vh - 60vh);
-    display: flex;
     color: #cacaca;
     font-size: 0.875rem;
-    box-shadow: 0 0 0.5rem rgb(42 40 39 / 30%);
+    @apply bg-blue-300;
+
+    .container {
+        min-height: calc(100vh - 60vh);
+        display: flex;
+        box-shadow: 0 0 0.5rem rgb(42 40 39 / 30%);
+    }
 
     .explorer {
         background-color: #33302f;
