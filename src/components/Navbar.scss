@@ -1,6 +1,7 @@
-#navbar {
-    // border: 1px solid red;
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
 
+#navbar {
     .main-nav {
         ul {
             height: 70px;
@@ -9,11 +10,15 @@
             align-items: center;
 
             li {
+                @apply font-medium tracking-wide mx-4;
+
                 &:first-child {
                     margin-right: auto;
                 }
 
-                @apply tracking-wide mx-4;
+                a {
+                    @include link-hover;
+                }
             }
         }
 

@@ -1,12 +1,14 @@
 @import 'tailwindcss/components';
+@import './variables.scss';
 
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    color: $color-primary-dark-2;
 
     .portra-page {
         min-height: 100vh;
-        @apply bg-green-100;
+        background-color: $color-green-pale;
 
         .title {
             text-align: center;

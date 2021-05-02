@@ -1,7 +1,9 @@
+@import '../styles/variables.scss';
+
 #about-block {
-    color: #cacaca;
+    color: $color-grey-light-2;
     font-size: 0.875rem;
-    @apply bg-blue-300;
+    background-color: $color-primary;
 
     .container {
         min-height: calc(100vh - 60vh);
@@ -10,7 +12,7 @@
     }
 
     .explorer {
-        background-color: #33302f;
+        background-color: $color-editor-black;
         flex: 0 0 200px;
 
         .skills,
@@ -18,8 +20,8 @@
             margin-bottom: 2em;
 
             .explorer-title {
-                background-color: #444;
-                color: #fdfdfd;
+                background-color: $color-black-2;
+                color: $color-grey-light-1;
                 padding: 4px 0;
                 margin-bottom: 0.3em;
                 padding-left: 1em;
@@ -48,7 +50,7 @@
     }
 
     .description {
-        background-color: #2a2827;
+        background-color: $color-black-1;
         width: 100%;
         font-size: 1rem;
         padding: 4em;

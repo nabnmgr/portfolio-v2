@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+@mixin primary-button {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    margin-top: 0.75em;
+    border-radius: 2px;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    font-weight: 500;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $color-primary-alternative;
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        background: $color-primary-dark-2;
+        transform: translateY(0px);
+    }
+}
+
+@mixin outline-button {
+    @include primary-button;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary-dark-1;
+
+    &:hover {
+        background: $color-primary;
+        color: $color-grey-light-1;
+    }
+
+    &:active {
+        background: $color-primary-alternative;
+    }
+}
+
+@mixin link-hover {
+    transition: color 0.2s ease-out;
+
+    &:not([disabled]):hover {
+        color: $color-primary;
+    }
+}

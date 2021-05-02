@@ -1,0 +1,7 @@
+@import '../styles/mixins.scss';
+
+#contact-block {
+    .email-button {
+        @include outline-button;
+    }
+}

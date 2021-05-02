@@ -1,9 +1,14 @@
+@import '../styles/variables.scss';
+
 #title-block {
-    // border: 1px solid blue;
     height: calc(60vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .title-name {
+        color: $color-primary;
+    }
 
     .title-tag {
         @apply text-center text-xl font-light tracking-wider;
