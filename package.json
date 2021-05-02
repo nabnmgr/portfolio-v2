@@ -28,6 +28,7 @@
     "gatsby-transformer-json": "^3.3.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "gsap": "^3.6.1",
+    "include-media": "^1.4.10",
     "lodash": "^4.17.21",
     "postcss": "^8.2.10",
     "react": "^17.0.1",

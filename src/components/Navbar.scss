@@ -22,13 +22,30 @@
             }
         }
 
+        .initials {
+            transition: all 0.5s ease;
+
+            &:hover {
+                filter: invert(1);
+            }
+        }
+
         .initial {
             display: inline-block;
             position: relative;
+            color: white;
+            line-height: 1.35;
 
             &.first {
-                background-color: black;
-                color: white;
+                background-color: $color-primary;
+            }
+
+            &.last {
+                background-color: $color-primary-alternative;
+            }
+
+            &.full-stop {
+                background-color: $color-primary-dark-2;
             }
         }
     }

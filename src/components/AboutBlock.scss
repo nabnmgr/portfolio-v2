@@ -1,3 +1,4 @@
+@import 'include-media';
 @import '../styles/variables.scss';
 
 #about-block {
@@ -54,5 +55,45 @@
         width: 100%;
         font-size: 1rem;
         padding: 4em;
+    }
+
+    @include media('<=tablet') {
+        .explorer {
+            flex: 0 0 150px;
+        }
+
+        .description {
+            padding: 2em;
+        }
+    }
+
+    @include media('<=420px') {
+        font-size: 0.7rem;
+
+        .explorer {
+            flex: 0 0 100px;
+
+            .skills,
+            .learning-plans {
+                .explorer-title {
+                    padding-left: 0.25em;
+                }
+
+                .tech {
+                    padding-left: 1.5em;
+                }
+            }
+
+            .icon {
+                width: 15px;
+                height: 15px;
+                margin-right: 0.25em;
+            }
+        }
+
+        .description {
+            font-size: 0.8rem;
+            padding: 2em 1.25em;
+        }
     }
 }

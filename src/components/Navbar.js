@@ -12,17 +12,20 @@ const Navbar = () => {
                             to="/"
                             className="nav-link logo font-serif text-3xl"
                         >
-                            <span className="initial first">n</span>
-                            <span className="initial last">p</span>
+                            <div className="initials">
+                                <span className="initial first">n</span>
+                                <span className="initial last">p</span>
+                                <span className="initial full-stop">.</span>
+                            </div>
                         </Link>
                     </li>
                     <li>
-                        <a href="#" className="nav-link">
+                        <a href="#projects-block" className="nav-link">
                             Projects
                         </a>
                     </li>
                     <li>
-                        <a href="#" className="nav-link">
+                        <a href="#contact-block" className="nav-link">
                             Contact
                         </a>
                     </li>

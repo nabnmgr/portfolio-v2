@@ -1,3 +1,4 @@
+@import 'include-media';
 @import 'tailwindcss/components';
 @import './variables.scss';
 
@@ -16,6 +17,14 @@ body {
             font-size: 1.125rem;
             visibility: hidden;
         }
+    }
+
+    @include media('<=420px') {
+        h1 {
+            @apply text-5xl;
+        }
+
+        font-size: 14px;
     }
 }
 

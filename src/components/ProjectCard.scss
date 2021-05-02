@@ -1,3 +1,4 @@
+@import 'include-media';
 @import '../styles/variables.scss';
 @import '../styles/mixins.scss';
 
@@ -26,5 +27,14 @@
     a {
         align-self: flex-end;
         @include primary-button;
+    }
+
+    @include media('<=tablet') {
+        @apply flex-col;
+
+        .project-img {
+            max-width: none;
+            width: 100%;
+        }
     }
 }
