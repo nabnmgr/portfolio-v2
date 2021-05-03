@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import './ProjectCard.scss';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectCard = ({ data }) => {
+    const cardRef = useRef(null);
+
     const {
         name,
         description: { description },
@@ -12,8 +18,26 @@ const ProjectCard = ({ data }) => {
 
     const pathToImage = getImage(image.gatsbyImageData);
 
+    useEffect(() => {
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: cardRef.current,
+                start: 'top bottom-=100',
+                toggleActions: 'play none none reverse',
+                // markers: true,
+            },
+        });
+
+        timeline.from(cardRef.current, {
+            duration: 1,
+            scale: 1.05,
+            autoAlpha: 0,
+            ease: 'power3.out',
+        });
+    }, []);
+
     return (
-        <li className="project">
+        <li className="project" ref={cardRef}>
             <div className="project-img">
                 <GatsbyImage
                     image={pathToImage}

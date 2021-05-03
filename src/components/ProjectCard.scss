@@ -4,6 +4,7 @@
 
 .project {
     @apply flex shadow mb-12 rounded overflow-hidden;
+    will-change: transform;
 
     .project-img {
         max-width: 52%;
