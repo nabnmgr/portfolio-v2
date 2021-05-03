@@ -2,6 +2,8 @@
 @import '../styles/mixins.scss';
 
 #navbar {
+    visibility: hidden;
+
     .main-nav {
         ul {
             height: 70px;

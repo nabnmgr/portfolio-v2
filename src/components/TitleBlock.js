@@ -3,10 +3,12 @@ import { gsap } from 'gsap';
 import './TitleBlock.scss';
 
 const TitleBlock = () => {
+    const titleBlockRef = useRef(null);
     const titleNameRef = useRef(null);
     const titleTagRef = useRef(null);
 
     useEffect(() => {
+        gsap.set(titleBlockRef.current, { visibility: 'visible' });
         const timeline = gsap.timeline();
 
         timeline.from([titleNameRef.current, titleTagRef.current], {
@@ -21,7 +23,7 @@ const TitleBlock = () => {
     }, []);
 
     return (
-        <div id="title-block" className="container mx-auto">
+        <div id="title-block" className="container mx-auto" ref={titleBlockRef}>
             <div className="hero overflow-hidden">
                 <h1 className="title-name" ref={titleNameRef}>
                     Nabin Purja

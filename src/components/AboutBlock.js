@@ -15,10 +15,12 @@ import {
 import './AboutBlock.scss';
 
 const AboutBlock = () => {
+    const aboutBlockRef = useRef(null);
     const backgroundRef = useRef(null);
     const containerRef = useRef(null);
 
     useEffect(() => {
+        gsap.set(aboutBlockRef.current, { visibility: 'visible' });
         const timeline = gsap.timeline({
             delay: 1.5,
         });
@@ -26,7 +28,7 @@ const AboutBlock = () => {
         timeline.from(
             backgroundRef.current,
             {
-                duration: 2,
+                duration: 1.8,
                 y: '45vh',
                 ease: 'power4.out',
             },
@@ -36,7 +38,7 @@ const AboutBlock = () => {
         timeline.from(
             containerRef.current,
             {
-                duration: 2,
+                duration: 1.8,
                 y: '45vh',
                 scale: 0.8,
                 ease: 'power4.out',
@@ -46,7 +48,7 @@ const AboutBlock = () => {
     }, []);
 
     return (
-        <div id="about-block" className="overflow-hidden">
+        <div id="about-block" className="overflow-hidden" ref={aboutBlockRef}>
             <div className="solid-background" ref={backgroundRef} />
             <div className="container mx-auto" ref={containerRef}>
                 <div className="explorer">

@@ -5,6 +5,7 @@
     color: $color-grey-light-2;
     font-size: 0.875rem;
     position: relative;
+    visibility: hidden;
 
     .solid-background {
         height: 100%;
@@ -27,6 +28,7 @@
     .explorer {
         background-color: $color-editor-black;
         flex: 0 0 200px;
+        will-change: transform;
 
         .skills,
         .learning-plans {

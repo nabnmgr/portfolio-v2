@@ -10,6 +10,7 @@ const Navbar = () => {
     const navbarRef = useRef(null);
 
     useEffect(() => {
+        gsap.set(navbarRef.current, { visibility: 'visible' });
         gsap.set(window, { scrollTo: 0 });
 
         const timeline = gsap.timeline({
