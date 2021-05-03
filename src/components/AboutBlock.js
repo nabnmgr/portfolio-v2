@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 import {
     HtmlIcon,
     CssIcon,
@@ -14,9 +15,40 @@ import {
 import './AboutBlock.scss';
 
 const AboutBlock = () => {
+    const backgroundRef = useRef(null);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const timeline = gsap.timeline({
+            delay: 1.5,
+        });
+
+        timeline.from(
+            backgroundRef.current,
+            {
+                duration: 2,
+                y: '45vh',
+                ease: 'power4.out',
+            },
+            0
+        );
+
+        timeline.from(
+            containerRef.current,
+            {
+                duration: 2,
+                y: '45vh',
+                scale: 0.8,
+                ease: 'power4.out',
+            },
+            0.2
+        );
+    }, []);
+
     return (
-        <div id="about-block" className="">
-            <div className="container mx-auto">
+        <div id="about-block" className="overflow-hidden">
+            <div className="solid-background" ref={backgroundRef} />
+            <div className="container mx-auto" ref={containerRef}>
                 <div className="explorer">
                     <div className="skills">
                         <div className="explorer-title">

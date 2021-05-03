@@ -4,12 +4,24 @@
 #about-block {
     color: $color-grey-light-2;
     font-size: 0.875rem;
-    background-color: $color-primary;
+    position: relative;
+
+    .solid-background {
+        height: 100%;
+        width: 100%;
+        background-color: $color-primary;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
 
     .container {
         min-height: calc(100vh - 60vh);
         display: flex;
         box-shadow: 0 0 0.5rem rgb(42 40 39 / 30%);
+        position: relative;
+        z-index: 2;
     }
 
     .explorer {
