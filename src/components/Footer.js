@@ -1,7 +1,11 @@
 import React from 'react';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { FaChevronUp } from 'react-icons/fa';
 import { GithubIcon, CodepenIcon } from './DevIcons';
 import './Footer.scss';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Footer = () => {
     return (
@@ -27,7 +31,16 @@ const Footer = () => {
                     <CodepenIcon />
                 </a>
             </div>
-            <a class="to-top">
+            <a
+                className="to-top"
+                onClick={e => {
+                    e.preventDefault();
+                    gsap.to(window, {
+                        duration: 0.5,
+                        scrollTo: 0,
+                    });
+                }}
+            >
                 <FaChevronUp />
                 <p>Top</p>
             </a>

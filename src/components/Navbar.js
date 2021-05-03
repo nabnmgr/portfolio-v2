@@ -1,8 +1,21 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './Navbar.scss';
 
+gsap.registerPlugin(ScrollToPlugin);
+
 const Navbar = () => {
+    const scrollToAnchor = e => {
+        e.preventDefault();
+        const anchor = e.target.hash;
+        gsap.to(window, {
+            duration: 0.5,
+            scrollTo: anchor,
+        });
+    };
+
     return (
         <header id="navbar" className="container mx-auto">
             <nav className="main-nav">
@@ -20,12 +33,26 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="#projects-block" className="nav-link">
+                        <a
+                            href="#projects-block"
+                            className="nav-link"
+                            onClick={e => {
+                                e.preventDefault();
+                                scrollToAnchor(e);
+                            }}
+                        >
                             Projects
                         </a>
                     </li>
                     <li>
-                        <a href="#contact-block" className="nav-link">
+                        <a
+                            href="#contact-block"
+                            className="nav-link"
+                            onClick={e => {
+                                e.preventDefault();
+                                scrollToAnchor(e);
+                            }}
+                        >
                             Contact
                         </a>
                     </li>

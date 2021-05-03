@@ -9,7 +9,7 @@ const ContactBlock = () => {
                 <div className="email">
                     <p className="email-text">nabinpurja93@gmail.com</p>
                     <a
-                        class="email-button"
+                        className="email-button"
                         href="mailto:nabinpurja93@gmail.com"
                     >
                         Send an email
