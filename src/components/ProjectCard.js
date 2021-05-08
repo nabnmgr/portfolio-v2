@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import './ProjectCard.scss';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -49,9 +50,9 @@ const ProjectCard = ({ data }) => {
                 <h3 className="project-name">{name}</h3>
                 <div className="project-description">{description}</div>
                 {link && (
-                    <a href={link} target="_blank" rel="noreferrer">
+                    <OutboundLink href={link} target="_blank" rel="noreferrer">
                         Live demo
-                    </a>
+                    </OutboundLink>
                 )}
             </div>
         </li>

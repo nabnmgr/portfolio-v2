@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { FaChevronUp } from 'react-icons/fa';
 import { GithubIcon, CodepenIcon } from './DevIcons';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import './Footer.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -14,25 +15,26 @@ const Footer = () => {
                 © Nabin Purja | {new Date().getFullYear()} |
             </div>
             <div className="footer-links">
-                <a
+                <OutboundLink
                     href="https://github.com/nabnmgr"
                     target="_blank"
                     rel="noopener"
                     aria-label="Github"
                 >
                     <GithubIcon />
-                </a>
-                <a
+                </OutboundLink>
+                <OutboundLink
                     href="https://codepen.io/purja"
                     target="_blank"
                     rel="noopener"
                     aria-label="Codepen"
                 >
                     <CodepenIcon />
-                </a>
+                </OutboundLink>
             </div>
             <a
                 className="to-top"
+                aria-label="Scroll back to top of the page."
                 onClick={e => {
                     e.preventDefault();
                     gsap.to(window, {

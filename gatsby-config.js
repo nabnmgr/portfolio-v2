@@ -70,6 +70,16 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                trackingIds: ['G-F8MEJC2TYP'],
+                pluginConfig: {
+                    head: true,
+                    respectDNT: true,
+                },
+            },
+        },
     ],
     siteMetadata: {
         title: 'Nabin Purja',
