@@ -2,8 +2,8 @@ import React from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { FaChevronUp } from 'react-icons/fa';
-import { GithubIcon, CodepenIcon } from './DevIcons';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import { GithubIcon, CodepenIcon } from './DevIcons';
 import './Footer.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
