@@ -5,6 +5,7 @@ require('dotenv').config({
 module.exports = {
     /* Your site config here */
     plugins: [
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
@@ -70,4 +71,8 @@ module.exports = {
             },
         },
     ],
+    siteMetadata: {
+        title: 'Nabin Purja',
+        description: 'Front-end developer based in London',
+    },
 };
