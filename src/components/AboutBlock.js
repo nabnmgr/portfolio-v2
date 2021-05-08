@@ -129,18 +129,24 @@ const AboutBlock = () => {
                 </div>
                 <div className="description font-mono">
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Perferendis eius dignissimos qui dicta earum
-                        aperiam non atque unde obcaecati sint, ea, tempora
-                        pariatur excepturi corrupti rerum inventore, molestias
-                        optio! Deserunt.
+                        I'm Nabin, a front-end developer based in{' '}
+                        <span className="highlight">London</span>.
                     </p>
                     <br />
                     <p>
-                        Nulla repellendus deserunt molestias atque. Odit, non?
-                        Ratione modi aspernatur praesentium doloribus
-                        consequuntur voluptates ducimus veniam inventore
-                        voluptate suscipit? Aut, in eos.
+                        I've been working as a developer to create{' '}
+                        <span className="highlight">
+                            interactive, accessible
+                        </span>{' '}
+                        web experiences since my graduation in 2018. Learning
+                        never stops, so I'm always looking forward to surprising
+                        myself.
+                    </p>
+                    <br />
+                    <p>
+                        Besides programming, I enjoy photography as a hobby
+                        which helps to boost my creativity and gives me a reason
+                        to walk and explore more.
                     </p>
                 </div>
             </div>

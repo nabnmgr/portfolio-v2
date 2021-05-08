@@ -67,8 +67,12 @@
     .description {
         background-color: $color-black-1;
         width: 100%;
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 4em;
+
+        .highlight {
+            color: $color-editor-gold;
+        }
     }
 
     @include media('<=tablet') {
