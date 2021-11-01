@@ -80,6 +80,12 @@ const AboutBlock = () => {
                             </li>
                             <li className="tech">
                                 <div className="icon">
+                                    <TypescriptIcon />
+                                </div>
+                                <div className="label">TypeScript</div>
+                            </li>
+                            <li className="tech">
+                                <div className="icon">
                                     <ReactIcon />
                                 </div>
                                 <div className="label">React</div>
@@ -106,12 +112,6 @@ const AboutBlock = () => {
                             <div className="label">learning_plans</div>
                         </div>
                         <ul>
-                            <li className="tech">
-                                <div className="icon">
-                                    <TypescriptIcon />
-                                </div>
-                                <div className="label">TypeScript</div>
-                            </li>
                             <li className="tech">
                                 <div className="icon">
                                     <NextjsIcon />

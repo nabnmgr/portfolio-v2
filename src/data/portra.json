@@ -18,9 +18,9 @@
         "category": "portrait"
     },
     {
-        "src": "../images/portra/cycling-portrait-1.JPG",
-        "description": "A girl portrait on cycle",
-        "isVertical": false,
+        "src": "../images/portra/rosh.JPG",
+        "description": "Portrait of a girl in black and white",
+        "isVertical": true,
         "category": "portrait"
     },
     {
@@ -79,6 +79,12 @@
         "category": "street"
     },
     {
+        "src": "../images/portra/madison.JPG",
+        "description": "Portrait of Youtuber - Madison Beach",
+        "isVertical": false,
+        "category": "portrait"
+    },
+    {
         "src": "../images/portra/pigeon-escaping.JPG",
         "description": "Portrait with a smile",
         "isVertical": false,
@@ -111,6 +117,12 @@
     {
         "src": "../images/portra/kew-gardens.JPG",
         "description": "Rowing in Thames river by Kew Gardens",
+        "isVertical": false,
+        "category": "nature"
+    },
+    {
+        "src": "../images/portra/oban.JPG",
+        "description": "Sunset in Oban, Scotland",
         "isVertical": false,
         "category": "nature"
     },
