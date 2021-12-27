@@ -3,41 +3,6 @@
 #footer {
     @apply flex items-center;
 
-    a {
-    }
-
-    .footer-links {
-        @apply flex;
-
-        a {
-            @include link-hover;
-            margin: 0 6px;
-        }
-
-        svg {
-            width: 20px;
-            height: auto;
-
-            g,
-            path {
-                transition: fill 0.2s ease-out;
-
-                &:hover {
-                    fill: $color-grey-dark-1;
-                }
-            }
-        }
-
-        a:hover {
-            svg {
-                g,
-                path {
-                    fill: $color-primary;
-                }
-            }
-        }
-    }
-
     .to-top {
         margin-left: auto;
         @apply flex flex-col items-center cursor-pointer;

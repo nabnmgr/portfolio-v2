@@ -10,6 +10,7 @@ import ThreeIcon from '../images/icons/three.svg';
 import FolderIcon from '../images/icons/folder.svg';
 import GithubIcon from '../images/icons/github.svg';
 import CodepenIcon from '../images/icons/codepen.svg';
+import LinkedinIcon from '../images/icons/linkedin.svg';
 
 export {
     HtmlIcon,
@@ -24,4 +25,5 @@ export {
     FolderIcon,
     GithubIcon,
     CodepenIcon,
+    LinkedinIcon,
 };

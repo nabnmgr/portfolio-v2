@@ -2,8 +2,6 @@ import React from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { FaChevronUp } from 'react-icons/fa';
-import { OutboundLink } from 'gatsby-plugin-google-gtag';
-import { GithubIcon, CodepenIcon } from './DevIcons';
 import './Footer.scss';
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -12,25 +10,7 @@ const Footer = () => {
     return (
         <footer id="footer" className="container mx-auto p-4 text-sm">
             <div className="footer-text">
-                © Nabin Purja | {new Date().getFullYear()} |
-            </div>
-            <div className="footer-links">
-                <OutboundLink
-                    href="https://github.com/nabnmgr"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Github"
-                >
-                    <GithubIcon />
-                </OutboundLink>
-                <OutboundLink
-                    href="https://codepen.io/purja"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Codepen"
-                >
-                    <CodepenIcon />
-                </OutboundLink>
+                © Nabin Purja | {new Date().getFullYear()}
             </div>
             <a
                 className="to-top"
