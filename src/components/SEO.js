@@ -33,8 +33,8 @@ SEO.propTypes = {
 };
 
 SEO.defaultProps = {
-    title: 'Front-end Developer',
-    description: 'Front-end Developer based in London',
+    title: 'Frontend Engineer',
+    description: 'Frontend Engineer based in London',
 };
 
 export default SEO;

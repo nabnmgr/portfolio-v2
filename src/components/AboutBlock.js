@@ -129,7 +129,7 @@ const AboutBlock = () => {
                 </div>
                 <div className="description font-mono">
                     <p>
-                        I'm Nabin, a front-end developer based in{' '}
+                        I'm Nabin, a frontend engineer based in{' '}
                         <span className="highlight">London</span>.
                     </p>
                     <br />

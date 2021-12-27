@@ -29,7 +29,7 @@ const TitleBlock = () => {
                     Nabin Purja
                 </h1>
                 <p className="title-tag" ref={titleTagRef}>
-                    Front-end developer
+                    Frontend Engineer
                 </p>
             </div>
         </div>

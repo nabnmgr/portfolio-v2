@@ -83,6 +83,6 @@ module.exports = {
     ],
     siteMetadata: {
         title: 'Nabin Purja',
-        description: 'Front-end developer based in London',
+        description: 'Frontend Engineer based in London',
     },
 };
